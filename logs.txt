@@ -86,3 +86,5 @@ This structure can help ETH Zurich manage access effectively while ensuring that
 /teacher/courses
 /teacher/create
 npx prisma studio
+
+vercel test
