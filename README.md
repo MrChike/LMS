@@ -12,8 +12,9 @@ This repository is an ongoing enhancement of the original LMS platform created b
 - Implement Docker Support for easy support dealing with dependency issues on different OS
 - Include Localization Support for students in multiple countries
 - Include extra upload platforms like S3
-- 
 - Live Classroom Collaboration Between students for Brainstorming and presentations.
+- Advanced Logging System with Grafana
+- Rating System
 
 [Tutorial](https://www.youtube.com/watch?v=Big_aFLmekI)
 
