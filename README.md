@@ -5,14 +5,14 @@
 This repository is an ongoing enhancement of the original LMS platform created by CodeWithAntonio with the goal to decouple & implement extra features
 
 - Dashboard Display with RBAC between Students, Teachers & the general Public (Anonymous)
-- Decouple Dependency on Clerk for Api Authentication to enable custom backend apis like DRF, Spring, Expressjs ....
-- DB Connection from online hosted platforms to local Instance support.
-- Include more Payment Processing Platforms like (Paypal, Flutterwave, Paystack)
+- Decouple Dependency on Clerk for Api Authentication to enable custom backend apis like DRF, Spring, Expressjs ✅
+- DB Connection from online hosted platforms to local Instance support. ✅
+- Include more Payment Processing Platforms like (Flutterwave, Paystack)
 - Include extra Video Streaming Option for YouTube & Vimeo
 - Implement Docker Support for easy support dealing with dependency issues on different OS
 - Include Localization Support for students in multiple countries
 - Include extra upload platforms like S3
-- Integrate extra options for video streaming like (Youtube, Vimeo)
+- 
 - Live Classroom Collaboration Between students for Brainstorming and presentations.
 
 [Tutorial](https://www.youtube.com/watch?v=Big_aFLmekI)
@@ -32,9 +32,9 @@ Key Features:
 - Video processing using Mux
 - HLS Video player using Mux
 - Rich text editor for chapter description
-- Authentication using Clerk
+- Authentication
 - ORM using Prisma
-- MySQL database using Planetscale
+- Postgres database 
 
 ### Prerequisites
 
@@ -55,27 +55,20 @@ npm install
 ### Setup .env file
 
 
-```js
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+```bash
 NEXT_PUBLIC_APP_URL=
 NEXT_PUBLIC_TEACHER_ID=
-
+BACKEND_API_URL=
 DATABASE_URL=
-
 UPLOADTHING_SECRET=
 UPLOADTHING_APP_ID=
-
 MUX_TOKEN_ID=
 MUX_TOKEN_SECRET=
-
-STRIPE_API_KEY=
 STRIPE_WEBHOOK_SECRET=
+STRIPE_API_KEY=
 ```
 
 ### Setup Prisma
-
-Using Postgres Local Instance
 
 ```shell
 npx prisma migrate reset
