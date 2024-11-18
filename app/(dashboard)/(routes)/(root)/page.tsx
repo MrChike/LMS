@@ -9,7 +9,7 @@ const api = axios.create({
   baseURL: `${process.env.BACKEND_API_URL}`,
 });
 
-export const fetchUserData = async (email="chikeegonu@gmail.com", password="kidazda20") => {
+export const fetchUserData = async (email="mrchike@mailinator.com", password="mrchike123") => {
   try {
     const response = await api.post('/account/token/', {
       email,

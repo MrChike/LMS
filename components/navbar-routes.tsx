@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from 'react'
 import { usePathname } from "next/navigation";
 import { LogOut } from "lucide-react";
 import Link from "next/link";
@@ -10,6 +11,10 @@ import { isTeacher } from "@/lib/teacher";
 import { SearchInput } from "./search-input";
 import { fetchUserData } from "@/app/(dashboard)/(routes)/(root)/page";
 import AccountProfile from "./profile/account-profile";
+
+function SearchBarFallback() {
+  return <>placeholder</>
+}
 
 export const NavbarRoutes = () => {
   const userId = `${process.env.NEXT_PUBLIC_TEACHER_ID}`;
@@ -24,7 +29,9 @@ export const NavbarRoutes = () => {
     <>
       {isSearchPage && (
         <div className="hidden md:block">
-          <SearchInput />
+          <Suspense fallback={<SearchBarFallback />}>
+            <SearchInput />
+          </Suspense>
         </div>
       )}
       <div className="flex gap-x-2 ml-auto">

@@ -1,4 +1,4 @@
-## Build an LMS Platform: Next.js 13.4.12, React 18.2.0, Typescript 5.2.2, Tailwind 3.3.3, Prisma 5.3.0, PostgreSQL, Docker, DjangoRestFramework(API)
+# Build an LMS Platform: Next.js 13.4.12, React 18.2.0, Node 18.17.0, Typescript 5.2.2, Tailwind 3.3.3,Prisma 5.3.0, PostgreSQL, Docker, DjangoRestFramework(API)
 
 ![Project Screenshot](./img/lms_screenshot.gif)
 
@@ -35,11 +35,9 @@ Key Features:
 - Rich text editor for chapter description
 - Authentication
 - ORM using Prisma
-- Postgres database 
+- Postgres database
 
-### Prerequisites
-
-**Node version 18.17.0**
+## Prerequisites
 
 ### Cloning the repository
 
@@ -54,7 +52,6 @@ npm install
 ```
 
 ### Setup .env file
-
 
 ```bash
 NEXT_PUBLIC_APP_URL=

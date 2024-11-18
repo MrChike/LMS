@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from 'next/image';
 import axios from "axios";
 
 interface SignInProps {
@@ -9,8 +10,8 @@ interface SignInProps {
 
 const SignIn = ({ login }: SignInProps) => {
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState("chikeegonu@gmail.com");
-  const [password, setPassword] = useState("kidazda20");
+  const [email, setEmail] = useState("mrchike@mailinator.com");
+  const [password, setPassword] = useState("mrchike123");
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
