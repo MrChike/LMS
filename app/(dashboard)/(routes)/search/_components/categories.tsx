@@ -32,7 +32,7 @@ const iconMap: Record<Category["name"], IconType> = {
 };
 
 function SearchBarFallback() {
-  return <>placeholder</>
+  return <>placeholder</>;
 }
 
 export const Categories = ({
@@ -41,9 +41,8 @@ export const Categories = ({
   return (
     <div className="flex items-center gap-x-2 overflow-x-auto pb-2">
       {items.map((item) => (
-        <Suspense fallback={<SearchBarFallback />}>
+        <Suspense key={item.id} fallback={<SearchBarFallback />}>
           <CategoryItem
-            key={item.id}
             label={item.name}
             icon={iconMap[item.name]}
             value={item.id}
@@ -51,5 +50,5 @@ export const Categories = ({
         </Suspense>
       ))}
     </div>
-  )
-}
+  );
+};
