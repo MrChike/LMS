@@ -5,11 +5,12 @@ import { CoursesList } from "@/components/courses-list";
 import { InfoCard } from "./_components/info-card";
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL: `${process.env.BACKEND_API_URL}`,
+export const api = axios.create({
+  baseURL: `${process.env.NEXT_PUBLIC_BACKEND_API_URL}`,
 });
 
-export const fetchUserData = async (email="mrchike@mailinator.com", password="mrchike123") => {
+export const fetchUserData = async (email="mrchike@mailinator.com", password="P@ssword01") => {
+// export const fetchUserData = async (email, password) => {
   try {
     const response = await api.post('/account/token/', {
       email,

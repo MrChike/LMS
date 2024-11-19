@@ -1,7 +1,7 @@
 import Mux from "@mux/mux-node";
-import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import { fetchUserData } from "@/app/(dashboard)/(routes)/(root)/page";
 
 // Ensure Mux environment variables are set
 const muxTokenId = process.env.MUX_TOKEN_ID;
@@ -21,7 +21,8 @@ export async function DELETE(
 ) {
   try {
     // Check for user authentication
-    const { userId } = auth();
+    const { userId } = await fetchUserData()
+    console.log('app/api/courses/[courseId]/chapters/[chapterId]/route.ts', userId)
     if (!userId) {
       console.log("Unauthorized access: userId is missing.");
       return new NextResponse("Unauthorized", { status: 401 });
@@ -102,7 +103,7 @@ export async function PATCH(
 ) {
   try {
     // Check for user authentication
-    const { userId } = auth();
+    const { userId } = await fetchUserData();
     const { isPublished, ...values } = await req.json();
 
     if (!userId) {

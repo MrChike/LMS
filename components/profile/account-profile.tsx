@@ -51,7 +51,7 @@ const AccountProfile = () => {
       <div className="profile-menu" ref={menuRef}>
         <div className="profile-header">
           <img
-            src="https://media.licdn.com/dms/image/v2/C4D03AQHO0P8YHLEszw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1650719854175?e=1735776000&v=beta&t=lVd7rM76bNqgA3xrEq3XcyMedFa1GLZ6N_HbEXg6CtU"
+            src="https://www.w3schools.com/w3images/avatar2.png"
             alt="AccountProfile"
             className="profile-image"
           />
@@ -76,7 +76,7 @@ const AccountProfile = () => {
     <div>
       {/* Image that triggers menu toggle */}
       <img
-        src="https://media.licdn.com/dms/image/v2/C4D03AQHO0P8YHLEszw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650719854175?e=1736380800&v=beta&t=305z1rq3D0xl1xeZ6KlgUy1HrnBnKJjzkrLiiw8vGsg"
+        src="https://www.w3schools.com/w3images/avatar2.png"
         alt="Description of the image"
         className="profile-image"
         ref={imageRef}  // Reference to the image

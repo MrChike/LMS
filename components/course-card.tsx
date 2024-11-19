@@ -104,7 +104,7 @@ export const CourseCard = ({
           <p className="text-xs text-muted-foreground" style={{fontSize: '15px', marginTop: '10px'}}>
             {category}
           </p>
-          <div className="my-3 flex items-center gap-x-2 text-sm md:text-xs">
+          <div className="my-3 flex items-center gap-x-2 text-sm md:text-xs" style={{ fontSize: '10px' }}>
             <div className="flex items-center gap-x-1 text-slate-500">
               <IconBadge size="sm" icon={BookOpen} />
               <span style={{ fontSize: 'small' }}>

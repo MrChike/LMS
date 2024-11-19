@@ -26,7 +26,7 @@ const ResetPassword = () => {
 
     try {
       // Make the API request with Axios to reset password
-      const response = await axios.post(`${process.env.BACKEND_API_URL}/account/reset-password`, formData);
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/account/reset-password`, formData);
       console.log('Response:', response.data);
       alert('Password reset successful!');
     } catch (error) {

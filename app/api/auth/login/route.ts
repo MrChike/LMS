@@ -2,15 +2,12 @@ import { NextResponse } from 'next/server';
 import axios from 'axios';
 
 console.log('app/api/auth/login/route.ts')
+
 export async function POST(req: Request) {
   try {
-    console.log('did it get here')
     const { email, password, rememberMe } = await req.json();
-    console.log('did it get here')
 
-    console.log(`${process.env.BACKEND_API_URL || ""}/account/token/`)
-
-    const response = await axios.post(`${process.env.BACKEND_API_URL || ""}/account/token/`, {
+    const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/account/token/`, {
       email,
       password,
       rememberMe,
