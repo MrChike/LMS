@@ -68,8 +68,8 @@ const SignIn = ({ login }: SignInProps) => {
         <div className="grid md:grid-cols-2 items-center gap-4 max-w-6xl w-full">
           <div className="border border-gray-300 rounded-lg p-6 max-w-md shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] max-md:mx-auto">
             <img
-              src="https://ethz.ch/staffnet/en/service/communication/corporate-design/logo/_jcr_content/par/greybox/par/image/image.imageformat.1286.1811079109.png"
-              alt="ETHZurich"
+              src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zt9q8k4txso33q1f09ux.png"
+              alt="LinkedIn"
               className="mx-auto"
             />
             <form className="space-y-4">
@@ -148,7 +148,7 @@ const SignIn = ({ login }: SignInProps) => {
               <div className="!mt-8">
                 <button
                   type="button"
-                  className="w-full shadow-xl py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-black hover:bg-yellow-800 focus:outline-none"
+                  className="w-full shadow-xl py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-black hover:bg-blue-800 focus:outline-none"
                   onClick={handleSubmit}
                   disabled={isLoading} // Disable button when loading
                 >

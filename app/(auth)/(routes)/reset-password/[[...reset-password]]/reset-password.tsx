@@ -50,7 +50,7 @@ const ResetPassword = () => {
         <div className="text-center mb-12">
           <a href="javascript:void(0)">
             <img
-              src="https://ethz.ch/staffnet/en/service/communication/corporate-design/logo/_jcr_content/par/greybox/par/image/image.imageformat.1286.1811079109.png"
+              src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zt9q8k4txso33q1f09ux.png"
               className="w-[65%] h-full max-md:w-full mx-auto block object-cover"
               alt="Reset Password Illustration"
               style={{ marginTop: '40px' }}
@@ -127,7 +127,7 @@ const ResetPassword = () => {
           <div className="!mt-8 text-center">
             <button
               type="submit"
-              className="py-4 px-8 text-lg font-semibold tracking-wide rounded-md text-white bg-black hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-black transition-all duration-200"
+              className="py-4 px-8 text-lg font-semibold tracking-wide rounded-md text-white bg-black hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-black transition-all duration-200"
             >
               Reset Password
             </button>
