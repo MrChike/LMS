@@ -7,14 +7,14 @@ This repository is an ongoing enhancement of the original LMS platform created b
 - Dashboard Display with RBAC between Students, Teachers & the general Public (Anonymous)
 - Decouple Dependency on Clerk for Api Authentication to enable custom backend apis like DRF, Spring, Expressjs ✅
 - DB Connection from online hosted platforms to local Instance support. ✅
-- Include more Payment Processing Platforms like (Flutterwave, Paystack)
-- Include extra Video Streaming Option for YouTube & Vimeo
-- Implement Docker Support for easy support dealing with dependency issues on different OS
-- Include Localization Support for students in multiple countries
-- Include extra upload platforms like S3
-- Live Classroom Collaboration Between students for Brainstorming and presentations.
-- Advanced Logging System with Grafana
-- Rating System
+💳 Integrate more Payment Processing Platforms like (Flutterwave, Paystack)
+🎥 Include extra Video Streaming Platforms like YouTube & Vimeo
+🐳 Implement Docker & Kubernetes for dependency isolation and scaling.
+🌍 Include Localization Support for students in multiple countries
+📂 Include extra file upload platforms like S3
+🧠 Live Classroom Collaboration Between students for Brainstorming, Debates and Presentations.
+📈 Advanced Logging System with Grafana & Apache Kafka for anomaly detection in login & payments.
+⭐ Course Rating System
 
 [Tutorial](https://www.youtube.com/watch?v=Big_aFLmekI)
 

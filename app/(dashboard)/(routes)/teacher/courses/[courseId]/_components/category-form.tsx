@@ -3,7 +3,7 @@
 import * as z from "zod";
 import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";  // Import Controller
 import { Pencil } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -100,9 +100,17 @@ export const CategoryForm = ({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Combobox
-                      options={...options}
-                      {...field}
+                    {/* Use Controller to wrap Combobox for proper form control */}
+                    <Controller
+                      name="categoryId"
+                      control={form.control}
+                      render={({ field }) => (
+                        <Combobox
+                          options={options}
+                          value={field.value}  // Bind the current value to the Combobox
+                          onChange={field.onChange}  // Pass onChange handler to Combobox
+                        />
+                      )}
                     />
                   </FormControl>
                   <FormMessage />
