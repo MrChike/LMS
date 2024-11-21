@@ -4,9 +4,9 @@
 
 This repository is an ongoing enhancement of the original LMS platform created by CodeWithAntonio with the goal to decouple & implement extra features
 
-- Dashboard Display with RBAC between Students, Teachers & the general Public (Anonymous)
-- Decouple Dependency on Clerk for Api Authentication to enable custom backend apis like DRF, Spring, Expressjs ✅
-- DB Connection from online hosted platforms to local Instance support. ✅
+📊 Dashboard Display with RBAC between Students, Teachers & the general Public (Anonymous)
+🚫 Decouple Dependency on Clerk for Api Authentication to enable custom backend apis like DRF, Spring, Expressjs ✅
+🌐 DB Connection from online hosted platforms to local Instance support. ✅
 💳 Integrate more Payment Processing Platforms like (Flutterwave, Paystack)
 🎥 Include extra Video Streaming Platforms like YouTube & Vimeo
 🐳 Implement Docker & Kubernetes for dependency isolation and scaling.
@@ -20,22 +20,22 @@ This repository is an ongoing enhancement of the original LMS platform created b
 
 Key Features:
 
-- Browse & Filter Courses
-- Purchase Courses using Stripe
-- Mark Chapters as Completed or Uncompleted
-- Progress Calculation of each Course
-- Student Dashboard
-- Teacher mode
-- Create new Courses
-- Create new Chapters
-- Easily reorder chapter position with drag n’ drop
-- Upload thumbnails, attachments and videos using UploadThing
-- Video processing using Mux
-- HLS Video player using Mux
-- Rich text editor for chapter description
-- Authentication
-- ORM using Prisma
-- Postgres database
+🔍 Browse & Filter Courses
+💳 Purchase Courses using Stripe
+✔️ Mark Chapters as Completed or Uncompleted
+📊 Progress Calculation of each Course
+👩‍🎓 Student Dashboard
+👨‍🏫 Teacher Mode
+➕ Create New Courses
+📚 Create New Chapters
+🔄 Easily Reorder Chapter Position with Drag n’ Drop
+📤 Upload Thumbnails, Attachments, and Videos using UploadThing
+🎬 Video Processing using Mux
+▶️ HLS Video Player using Mux
+📝 Rich Text Editor for Chapter Description
+🔐 Authentication
+🔗 ORM using Prisma
+🗄️ Postgres Database
 
 ## Prerequisites
 

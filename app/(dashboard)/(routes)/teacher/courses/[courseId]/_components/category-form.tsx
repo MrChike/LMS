@@ -54,14 +54,17 @@ export const CategoryForm = ({
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      // Send the PATCH request without the `next` property
       await axios.patch(`/api/courses/${courseId}`, values);
       toast.success("Course updated");
+
+      // Trigger the refresh of the router
       toggleEdit();
-      router.refresh();
+      router.refresh();  // This will force the component to reload and show the updated data
     } catch {
       toast.error("Something went wrong");
     }
-  }
+  };
 
   const selectedOption = options.find((option) => option.value === initialData.categoryId);
 
@@ -129,5 +132,5 @@ export const CategoryForm = ({
         </Form>
       )}
     </div>
-  )
-}
+  );
+};
