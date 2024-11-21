@@ -1,4 +1,4 @@
-# Build an LMS Platform: Next.js 13.4.12, React 18.2.0, Node 18.17.0, Typescript 5.2.2, Tailwind 3.3.3,Prisma 5.3.0, PostgreSQL, Docker, DjangoRestFramework(API)
+# Build an LMS Platform: Next.js 13.4.12, React 18.2.0, Node 18.18.0, Typescript 5.2.2, Tailwind 3.3.3, Prisma 5.3.0, PostgreSQL, Docker, DjangoRestFramework(API)
 
 ![Project Screenshot](./img/lms_screenshot.gif)
 
@@ -82,4 +82,11 @@ npm run dev # For Local Interactive Development
 npm run build # For Production Environment Simulation
 npm run export # For Static Files Build
 npm start # For Running your application
+```
+    
+```shell
+    npm run dev # For Local Interactive Development
+    npm run build # For Production Environment Simulation
+    npm run export # For Static Files Build
+    npm start # For Running your application
 ```
