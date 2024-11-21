@@ -83,10 +83,3 @@ npm run build # For Production Environment Simulation
 npm run export # For Static Files Build
 npm start # For Running your application
 ```
-    
-```shell
-    npm run dev # For Local Interactive Development
-    npm run build # For Production Environment Simulation
-    npm run export # For Static Files Build
-    npm start # For Running your application
-```
