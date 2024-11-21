@@ -1,1 +1,2 @@
 abs text
+auto test
