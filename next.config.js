@@ -6,9 +6,6 @@ const nextConfig = {
       "dev-to-uploads.s3.amazonaws.com"
     ]
   },
-  // experimental: {
-  //   serverActions: true,
-  // },
 }
 
 module.exports = nextConfig
