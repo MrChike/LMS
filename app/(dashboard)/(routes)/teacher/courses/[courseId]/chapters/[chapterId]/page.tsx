@@ -9,7 +9,7 @@ import { ChapterDescriptionForm } from "./_components/chapter-description-form";
 import { ChapterAccessForm } from "./_components/chapter-access-form";
 import { ChapterVideoForm } from "./_components/chapter-video-form";
 import { ChapterActions } from "./_components/chapter-actions";
-import { fetchUserData } from "@/app/(dashboard)/(routes)/(root)/page";
+import { fetchUserData } from "@/app/api/auth/login/route";
 
 const ChapterIdPage = async ({
   params

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 import { db } from "@/lib/db";
 import { stripe } from "@/lib/stripe";
-import { fetchUserData } from "@/app/(dashboard)/(routes)/(root)/page";
+import { fetchUserData } from "@/app/api/auth/login/route";
 
 export async function POST(
   req: Request,

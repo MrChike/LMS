@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 import { CourseProgress } from "@/components/course-progress";
 
 import { CourseSidebarItem } from "./course-sidebar-item";
-import { fetchUserData } from "@/app/(dashboard)/(routes)/(root)/page";
+import { fetchUserData } from "@/app/api/auth/login/route";
 
 interface CourseSidebarProps {
   course: Course & {

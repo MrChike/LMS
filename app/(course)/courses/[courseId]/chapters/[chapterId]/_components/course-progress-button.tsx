@@ -51,7 +51,7 @@ export const CourseProgressButton = ({
     }
   }
 
-  const Icon = isCompleted ? XCircle : CheckCircle
+  const Icon = isCompleted ? XCircle : CheckCircle;
 
   return (
     <Button
@@ -64,5 +64,49 @@ export const CourseProgressButton = ({
       {isCompleted ? "Not completed" : "Mark as complete"}
       <Icon className="h-4 w-4 ml-2" />
     </Button>
-  )
+  );
+};
+
+// ISR function for getting the data for the course page
+export async function getStaticProps({ params }: { params: { courseId: string, chapterId: string } }) {
+  try {
+    // Fetch the course data from your API
+    const courseRes = await axios.get(`/api/courses/${params.courseId}`);
+    const chapterRes = await axios.get(`/api/courses/${params.courseId}/chapters/${params.chapterId}`);
+
+    const courseData = courseRes.data;
+    const chapterData = chapterRes.data;
+
+    return {
+      props: {
+        courseData,
+        chapterData
+      },
+      revalidate: 60, // Regenerate this page at most every 60 seconds
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        courseData: null,
+        chapterData: null
+      },
+      revalidate: 60, // Regenerate at most every 60 seconds
+    };
+  }
+}
+
+export async function getStaticPaths() {
+  // Generate paths for your dynamic pages (like [courseId] and [chapterId])
+  const paths = [
+    // Add static paths here (for courses and chapters)
+    { params: { courseId: "312b22ee-5de8-414f-82a2-7dcc99eea7c2", chapterId: "1344a26b-84c5-4a96-b2cb-fb5e89633d7b" } },
+    { params: { courseId: "388ead56-ecb0-4119-9cfa-22bde6a2cc14", chapterId: "4a0ca901-3ec6-4f65-b4b9-547b91eb0b7c" } },
+    // Add more paths as needed
+  ];
+
+  return {
+    paths,
+    fallback: 'blocking', // Block until the page is generated
+  };
 }

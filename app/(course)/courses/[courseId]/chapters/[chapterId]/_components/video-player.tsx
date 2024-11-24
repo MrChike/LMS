@@ -48,13 +48,13 @@ export const VideoPlayer = ({
         router.refresh();
 
         if (nextChapterId) {
-          router.push(`/courses/${courseId}/chapters/${nextChapterId}`)
+          router.push(`/courses/${courseId}/chapters/${nextChapterId}`);
         }
       }
     } catch {
       toast.error("Something went wrong");
     }
-  }
+  };
 
   return (
     <div className="relative aspect-video">
@@ -84,5 +84,65 @@ export const VideoPlayer = ({
         />
       )}
     </div>
-  )
+  );
+};
+
+export async function getServerSideProps({ params }: { params: { courseId: string } }) {
+  const { courseId } = params;
+
+  try {
+    // Fetch course data
+    const courseRes = await axios.get(`/api/courses/${courseId}`);
+    const courseData = courseRes.data;
+
+    // Fetch chapter data for the course
+    const chapterRes = await axios.get(`/api/courses/${courseId}/chapters`);
+    const chapterData = chapterRes.data;
+
+    // Find the current chapter and the next chapter
+    const currentChapter = chapterData.find((chapter: any) => chapter.id === courseData.currentChapterId);
+    const nextChapter = chapterData.find((chapter: any) => chapter.id === courseData.nextChapterId);
+
+    return {
+      props: {
+        playbackId: currentChapter.playbackId,
+        courseId,
+        chapterId: currentChapter.id,
+        nextChapterId: nextChapter?.id || null,
+        isLocked: currentChapter.isLocked,
+        completeOnEnd: currentChapter.completeOnEnd,
+        title: currentChapter.title,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching course data", error);
+    return {
+      notFound: true, // Return 404 if data fetch fails
+    };
+  }
+}
+
+export default function VideoPage({
+  playbackId,
+  courseId,
+  chapterId,
+  nextChapterId,
+  isLocked,
+  completeOnEnd,
+  title,
+}: VideoPlayerProps) {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <VideoPlayer
+        playbackId={playbackId}
+        courseId={courseId}
+        chapterId={chapterId}
+        nextChapterId={nextChapterId}
+        isLocked={isLocked}
+        completeOnEnd={completeOnEnd}
+        title={title}
+      />
+    </div>
+  );
 }

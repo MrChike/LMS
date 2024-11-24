@@ -6,7 +6,7 @@ import { getCourses } from "@/actions/get-courses";
 import { CoursesList } from "@/components/courses-list";
 
 import { Categories } from "./_components/categories";
-import { fetchUserData } from "../(root)/page";
+import { fetchUserData } from "@/app/api/auth/login/route";
 
 interface SearchPageProps {
   searchParams: {

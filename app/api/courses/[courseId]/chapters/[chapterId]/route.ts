@@ -1,7 +1,7 @@
 import Mux from "@mux/mux-node";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
-import { fetchUserData } from "@/app/(dashboard)/(routes)/(root)/page";
+import { fetchUserData } from "@/app/api/auth/login/route";
 
 // Ensure Mux environment variables are set
 const muxTokenId = process.env.MUX_TOKEN_ID;

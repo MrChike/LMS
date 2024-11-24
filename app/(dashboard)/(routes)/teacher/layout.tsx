@@ -18,9 +18,9 @@
  
 // export default TeacherLayout;
 
+import { fetchUserData } from "@/app/api/auth/login/route";
 import { isTeacher } from "@/lib/teacher";
 import { redirect } from "next/navigation";
-import { fetchUserData } from "../(root)/page";
 
 const TeacherLayout = async ({ children }: { children: React.ReactNode }) => {
   // Await the result of fetchUserData to get the resolved user data

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../../app/globals.css';
 import { IoSettingsOutline, IoLogOutOutline } from "react-icons/io5";
-import { fetchUserData } from '@/app/(dashboard)/(routes)/(root)/page';
 import Image from 'next/image';
+import { fetchUserData } from '@/app/api/auth/login/route';
 
 const AccountProfile = () => {
   const [menuOpen, setMenuOpen] = useState(false);

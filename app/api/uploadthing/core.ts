@@ -1,7 +1,7 @@
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 
 import { isTeacher } from "@/lib/teacher";
-import { fetchUserData } from "@/app/(dashboard)/(routes)/(root)/page";
+import { fetchUserData } from "../auth/login/route";
  
 const f = createUploadthing();
  

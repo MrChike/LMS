@@ -3,7 +3,7 @@ import { db } from "@/lib/db";
 import { getProgress } from "@/actions/get-progress";
 import { CourseSidebar } from "./_components/course-sidebar";
 import { CourseNavbar } from "./_components/course-navbar";
-import { fetchUserData } from "@/app/(dashboard)/(routes)/(root)/page";
+import { fetchUserData } from "@/app/api/auth/login/route";
 
 const CourseLayout = async ({
   children,

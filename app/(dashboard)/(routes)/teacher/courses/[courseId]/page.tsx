@@ -13,8 +13,9 @@ import { PriceForm } from "./_components/price-form";
 import { AttachmentForm } from "./_components/attachment-form";
 import { ChaptersForm } from "./_components/chapters-form";
 import { Actions } from "./_components/actions";
-import { fetchUserData } from "../../../(root)/page";
+import { fetchUserData } from "@/app/api/auth/login/route";
 
+// TODO: Upon clicking the publish button and after the cofetti, redirect to teacher/courses page
 const CourseIdPage = async ({
   params
 }: {

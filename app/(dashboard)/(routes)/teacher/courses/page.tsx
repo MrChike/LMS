@@ -4,7 +4,7 @@ import { db } from "@/lib/db";
 
 import { DataTable } from "./_components/data-table";
 import { columns } from "./_components/columns";
-import { fetchUserData } from "../../(root)/page";
+import { fetchUserData } from "@/app/api/auth/login/route";
 
 const CoursesPage = async () => {
   const { userId } = await fetchUserData();

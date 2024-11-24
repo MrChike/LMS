@@ -4,7 +4,9 @@ import { CheckCircle, Lock, PlayCircle } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
 import { cn } from "@/lib/utils";
+import axios from "axios";
 
+// Props interface for CourseSidebarItem
 interface CourseSidebarItemProps {
   label: string;
   id: string;
@@ -13,6 +15,7 @@ interface CourseSidebarItemProps {
   isLocked: boolean;
 };
 
+// Your CourseSidebarItem component
 export const CourseSidebarItem = ({
   label,
   id,
@@ -58,5 +61,28 @@ export const CourseSidebarItem = ({
         isCompleted && "border-emerald-700"
       )} />
     </button>
-  )
+  );
+};
+
+// Applying ISR using getStaticProps
+export async function getServerSideProps() {
+  // Fetch your data here, e.g., course data or other relevant information
+  const courseData = await fetchCourseData();
+
+  return {
+    props: {
+      courseData,
+    },
+    revalidate: 60, // Regenerate page at most once every 60 seconds
+  };
+}
+  
+console.log('fetch course data function executed @ app/(course)/courses/[courseId]/_components/course-sidebar-item.tsx')
+
+// This function simulates fetching the course data; replace it with your actual fetching logic.
+async function fetchCourseData() {
+  const response = await axios.get('/app/api/courses');
+  console.log('fetch course data function executed @ app/(course)/courses/[courseId]/_components/course-sidebar-item.tsx')
+  const data = await response;
+  return data;
 }

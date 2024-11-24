@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 
 import { db } from "@/lib/db";
 import { isTeacher } from "@/lib/teacher";
-import { fetchUserData } from "@/app/(dashboard)/(routes)/(root)/page";
+import { fetchUserData } from "../auth/login/route";
+
 
 export async function POST(
   req: Request,

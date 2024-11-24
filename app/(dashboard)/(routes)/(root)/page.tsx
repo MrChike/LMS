@@ -3,25 +3,8 @@ import { CheckCircle, Clock } from "lucide-react";
 import { getDashboardCourses } from "@/actions/get-dashboard-courses";
 import { CoursesList } from "@/components/courses-list";
 import { InfoCard } from "./_components/info-card";
-import axios from 'axios';
+import { fetchUserData } from "@/app/api/auth/login/route";
 
-export const api = axios.create({
-  baseURL: `${process.env.NEXT_PUBLIC_BACKEND_API_URL}`,
-});
-
-
-export const fetchUserData = async (email="mrchike@mailinator.com", password="mrchike123") => {
-  try {
-    const response = await api.post('/account/token/', {
-      email,
-      password,
-    });
-    console.log('app/(dashboard)/(routes)/(root)/page.tsx', response.data.userId)
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching user data:', error); // Log error if any
-  }
-};
 
 export default async function Dashboard() {
   const {userId} = await fetchUserData();
