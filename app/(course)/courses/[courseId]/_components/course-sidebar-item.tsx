@@ -65,7 +65,7 @@ export const CourseSidebarItem = ({
 };
 
 // Applying ISR using getStaticProps
-export async function getServerSideProps() {
+export async function getStaticProps() {
   // Fetch your data here, e.g., course data or other relevant information
   const courseData = await fetchCourseData();
 

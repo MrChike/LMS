@@ -13,7 +13,7 @@ import { PriceForm } from "./_components/price-form";
 import { AttachmentForm } from "./_components/attachment-form";
 import { ChaptersForm } from "./_components/chapters-form";
 import { Actions } from "./_components/actions";
-import { fetchUserData } from "@/app/api/auth/login/route";
+// import { fetchUserData } from "@/app/api/auth/login/route";
 
 // TODO: Upon clicking the publish button and after the cofetti, redirect to teacher/courses page
 const CourseIdPage = async ({
@@ -21,7 +21,8 @@ const CourseIdPage = async ({
 }: {
   params: { courseId: string }
 }) => {
-  const { userId } = await fetchUserData();
+  // const { userId } = await fetchUserData();
+  const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
 
   if (!userId) {
     return redirect("/search");

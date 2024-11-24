@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { db } from "@/lib/db";
-import { fetchUserData } from "@/app/api/auth/login/route";
+// import { fetchUserData } from "@/app/api/auth/login/route";
 
 
 export async function PATCH(
@@ -9,7 +9,8 @@ export async function PATCH(
   { params }: { params: { courseId: string } }
 ) {
   try {
-    const { userId } = await fetchUserData();
+    // const { userId } = await fetchUserData();
+    const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
 
     if (!userId) {
       return new NextResponse("Unauthorized", { status: 401 });

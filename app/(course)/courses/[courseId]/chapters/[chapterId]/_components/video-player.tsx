@@ -87,7 +87,7 @@ export const VideoPlayer = ({
   );
 };
 
-export async function getServerSideProps({ params }: { params: { courseId: string } }) {
+export async function getStaticProps({ params }: { params: { courseId: string } }) {
   const { courseId } = params;
 
   try {

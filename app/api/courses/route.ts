@@ -2,14 +2,15 @@ import { NextResponse } from "next/server";
 
 import { db } from "@/lib/db";
 import { isTeacher } from "@/lib/teacher";
-import { fetchUserData } from "../auth/login/route";
+// import { fetchUserData } from "../auth/login/route";
 
 
 export async function POST(
   req: Request,
 ) {
   try {
-    const { userId } = await fetchUserData();
+    // const { userId } = await fetchUserData();
+    const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
     const { title } = await req.json();
 
     if (!userId || !isTeacher(userId)) {

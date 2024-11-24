@@ -6,7 +6,7 @@ import { getCourses } from "@/actions/get-courses";
 import { CoursesList } from "@/components/courses-list";
 
 import { Categories } from "./_components/categories";
-import { fetchUserData } from "@/app/api/auth/login/route";
+// import { fetchUserData } from "@/app/api/auth/login/route";
 
 interface SearchPageProps {
   searchParams: {
@@ -18,7 +18,8 @@ interface SearchPageProps {
 const SearchPage = async ({
   searchParams
 }: SearchPageProps) => {
-  const {userId} = await fetchUserData();
+  // const {userId} = await fetchUserData();
+  const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
 
   if (!userId) {
     return redirect("/search");

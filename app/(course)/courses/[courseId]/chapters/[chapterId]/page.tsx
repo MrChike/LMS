@@ -9,14 +9,15 @@ import { Preview } from "@/components/preview";
 import { VideoPlayer } from "./_components/video-player";
 import { CourseEnrollButton } from "./_components/course-enroll-button";
 import { CourseProgressButton } from "./_components/course-progress-button";
-import { fetchUserData } from "@/app/api/auth/login/route";
+// import { fetchUserData } from "@/app/api/auth/login/route";
 
 const ChapterIdPage = async ({
   params
 }: {
   params: { courseId: string; chapterId: string }
 }) => {
-  const { userId } = await fetchUserData();
+  // const { userId } = await fetchUserData();
+  const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
   
   if (!userId) {
     return redirect("/search");

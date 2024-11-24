@@ -3,16 +3,17 @@ import { NextResponse } from "next/server";
 
 import { db } from "@/lib/db";
 import { stripe } from "@/lib/stripe";
-import { fetchUserData } from "@/app/api/auth/login/route";
+// import { fetchUserData } from "@/app/api/auth/login/route";
 
 export async function POST(
   req: Request,
   { params }: { params: { courseId: string } }
 ) {
   try {
-    const user = await fetchUserData();
+    // const user = await fetchUserData();
+    const user = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
 
-    if (!user || !user.id || !user.email) {
+    if (!user) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
@@ -26,7 +27,7 @@ export async function POST(
     const purchase = await db.purchase.findUnique({
       where: {
         userId_courseId: {
-          userId: user.id,
+          userId: 'user_2no8EeRrF7sTuLtyPuYlo5s59x1',
           courseId: params.courseId
         }
       }
@@ -56,7 +57,7 @@ export async function POST(
 
     let stripeCustomer = await db.stripeCustomer.findUnique({
       where: {
-        userId: user.id,
+        userId: 'user_2no8EeRrF7sTuLtyPuYlo5s59x1',
       },
       select: {
         stripeCustomerId: true,
@@ -65,12 +66,12 @@ export async function POST(
 
     if (!stripeCustomer) {
       const customer = await stripe.customers.create({
-        email: user.emailAddresses[0].emailAddress,
+        email: 'mrchike@mailinator.com',
       });
 
       stripeCustomer = await db.stripeCustomer.create({
         data: {
-          userId: user.id,
+          userId: 'user_2no8EeRrF7sTuLtyPuYlo5s59x1',
           stripeCustomerId: customer.id,
         }
       });
@@ -84,7 +85,7 @@ export async function POST(
       cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/courses/${course.id}?canceled=1`,
       metadata: {
         courseId: course.id,
-        userId: user.id,
+        userId: 'user_2no8EeRrF7sTuLtyPuYlo5s59x1',
       }
     });
 

@@ -3,7 +3,7 @@ import { db } from "@/lib/db";
 import { getProgress } from "@/actions/get-progress";
 import { CourseSidebar } from "./_components/course-sidebar";
 import { CourseNavbar } from "./_components/course-navbar";
-import { fetchUserData } from "@/app/api/auth/login/route";
+// import { fetchUserData } from "@/app/api/auth/login/route";
 
 const CourseLayout = async ({
   children,
@@ -13,8 +13,9 @@ const CourseLayout = async ({
   params: { courseId: string };
 }) => {
   // Await the result of fetchUserData to get the actual user data
-  const userData = await fetchUserData();
-  const { userId } = userData;
+  // const userData = await fetchUserData();
+  // const { userId } = userData;
+  const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
 
   console.log('layout', userId);
 

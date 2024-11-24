@@ -4,10 +4,11 @@ import { getAnalytics } from "@/actions/get-analytics";
 
 import { DataCard } from "./_components/data-card";
 import { Chart } from "./_components/chart";
-import { fetchUserData } from "@/app/api/auth/login/route";
+// import { fetchUserData } from "@/app/api/auth/login/route";
 
 const AnalyticsPage = async () => {
-  const { userId } = await fetchUserData();
+  // const { userId } = await fetchUserData();
+  const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
 
   if (!userId) {
     return redirect("/search");

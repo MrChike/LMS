@@ -10,7 +10,7 @@ import { isTeacher } from "@/lib/teacher";
 
 import { SearchInput } from "./search-input";
 import AccountProfile from "./profile/account-profile";
-import { fetchUserData } from '@/app/api/auth/login/route';
+// import { fetchUserData } from '@/app/api/auth/login/route';
 
 function SearchBarFallback() {
   return <>placeholder</>

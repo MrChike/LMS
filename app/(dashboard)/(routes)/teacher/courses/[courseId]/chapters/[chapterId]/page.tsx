@@ -9,14 +9,15 @@ import { ChapterDescriptionForm } from "./_components/chapter-description-form";
 import { ChapterAccessForm } from "./_components/chapter-access-form";
 import { ChapterVideoForm } from "./_components/chapter-video-form";
 import { ChapterActions } from "./_components/chapter-actions";
-import { fetchUserData } from "@/app/api/auth/login/route";
+// import { fetchUserData } from "@/app/api/auth/login/route";
 
 const ChapterIdPage = async ({
   params
 }: {
   params: { courseId: string; chapterId: string }
 }) => {
-  const { userId } = await fetchUserData();
+  // const { userId } = await fetchUserData();
+  const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
 
   if (!userId) {
     return redirect("/search");

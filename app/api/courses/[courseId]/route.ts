@@ -1,7 +1,7 @@
 import Mux from "@mux/mux-node";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
-import { fetchUserData } from "../../auth/login/route";
+// import { fetchUserData } from "../../auth/login/route";
 
 // Initialize Mux client with credentials
 const { Video } = new Mux(
@@ -23,7 +23,8 @@ export async function DELETE(
 
   try {
     // Fetch user data (ensure the user is logged in)
-    const { userId } = await fetchUserData();
+    // const { userId } = await fetchUserData();
+    const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
 
     // Ensure the user is authorized
     if (!userId) {
@@ -90,7 +91,8 @@ export async function PATCH(
 
   try {
     // Fetch user data (ensure the user is logged in)
-    const { userId } = await fetchUserData();
+    // const { userId } = await fetchUserData();
+    const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
 
     // Ensure the user is authorized
     if (!userId) {

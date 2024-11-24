@@ -147,7 +147,7 @@ const CoursesPage = ({ courses }: CoursesPageProps) => {
 export default CoursesPage;
 
 // Fetch data for the CoursesPage with ISR
-export async function getServerSideProps() {
+export async function getStaticProps() {
   // Fetch data (e.g., from an API or a database)
   const response = await axios.get('/app/api/courses'); // replace with your data source
   const courses = await response; // Assuming it returns an array of courses

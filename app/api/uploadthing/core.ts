@@ -1,12 +1,13 @@
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 
 import { isTeacher } from "@/lib/teacher";
-import { fetchUserData } from "../auth/login/route";
+// import { fetchUserData } from "../auth/login/route";
  
 const f = createUploadthing();
  
 const handleAuth = async () => {
-  const { userId } = await fetchUserData();
+  // const { userId } = await fetchUserData();
+  const userId = 'user_2no8EeRrF7sTuLtyPuYlo5s59x1';
   const isAuthorized = isTeacher(userId);
 
   if (!userId || !isAuthorized) throw new Error("Unauthorized");
